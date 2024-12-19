@@ -12,23 +12,3 @@ This repository contains a series of Assembly Language tasks using the Irvine32 
 6. [License](#license)
 
 ---
-
-## Task 1: Print a Message
-
-### Objective:
-Write a program that prints `"Welcome Assembly Language"` to the screen.
-
-### Code:
-```assembly
-INCLUDE Irvine32.inc
-
-.data
-    message BYTE "Welcome Assembly Language", 0  ; Null-terminated string
-
-.code
-MAIN PROC
-    mov edx, OFFSET message   ; Load the address of the string into EDX
-    call WriteString          ; Call WriteString to print the message
-    exit
-MAIN ENDP
-END MAIN
